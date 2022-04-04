@@ -1,0 +1,57 @@
+@import "_vars";
+@import "_mixin";
+@import "vendor/reset";
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2');
+    src: url('../fonts/Inter-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Bold.woff2') format('woff2');
+    src: url('../fonts/Inter-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-ExtraBold.woff2') format('woff2');
+    src: url('../fonts/Inter-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+html, body {
+    font-family: "Inter", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $mainText;
+    height: 100%;
+}
+
+body.no-scroll{
+    overflow: hidden !important;
+    padding-right: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Layout */
+@import "layout/container.scss";
+@import "layout/page.scss";
+
+/* Components */
+@import "components/typography.scss";
+@import "components/logo.scss";
+
+/* Pages */
+@import "pages/ui-kit.scss";

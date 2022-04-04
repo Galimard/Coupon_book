@@ -1,0 +1,13 @@
+.ui-kit {
+    &__title {
+        margin-bottom: $space * 6;
+    }
+
+    &__block {
+        margin-bottom: $space * 12;
+    }
+
+    @include breakpoint($bp-1200) {
+
+    }
+}

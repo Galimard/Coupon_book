@@ -1,0 +1,32 @@
+@include breakpointMin($bp-576) {
+    .container {
+        max-width: 540px;
+        padding: 0 ($space * 5);
+        margin: 0 auto;
+    }
+}
+
+@include breakpointMin($bp-768) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@include breakpointMin($bp-992) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+@include breakpointMin($bp-1200) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@include breakpointMin($bp-1400) {
+    .container {
+        max-width: 1244px;
+    }
+}
+
