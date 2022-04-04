@@ -1,14 +1,22 @@
-@include breakpointMin($bp-576) {
-    .container {
-        max-width: 540px;
-        padding: 0 ($space * 5);
-        margin: 0 auto;
-    }
+.container {
+    max-width: 540px;
+    padding: 0 ($space * 5);
+    margin: 0 auto;
+}
+
+.container-sm {
+    max-width: 360px;
+    padding: 0 ($space * 6);
+    margin: 0 auto;
 }
 
 @include breakpointMin($bp-768) {
     .container {
         max-width: 720px;
+    }
+
+    .container-sm {
+        max-width: 608px;
     }
 }
 

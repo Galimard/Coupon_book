@@ -1,6 +1,8 @@
 @import "_vars";
 @import "_mixin";
 @import "vendor/reset";
+@import "vendor/slick";
+@import "vendor/slick-theme";
 
 @font-face {
     font-family: 'Inter';
@@ -29,7 +31,7 @@
 html, body {
     font-family: "Inter", "Arial", sans-serif;
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1.43;
     color: $mainText;
     height: 100%;
 }
@@ -52,6 +54,9 @@ body.no-scroll{
 /* Components */
 @import "components/typography.scss";
 @import "components/logo.scss";
+@import "components/button.scss";
+@import "components/form.scss";
+@import "components/tabs.scss";
 
 /* Pages */
 @import "pages/ui-kit.scss";

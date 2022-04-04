@@ -5,13 +5,53 @@ title: UI-KIT
 <div class="ui-kit">
     <div class="container">
 
-        <h1 class="title-h1 ui-kit__title">UI Kit</h1>
+        <h1 class="title-h1 text-center ui-kit__mb">UI Kit Page</h1>
     
-        <a href="/" class="logo"></a>
+        <div class="ui-kit__block">
+            <a href="/" class="logo"></a>
+        </div>        
 
         <div class="ui-kit__block">
-            <h2 class="title-h1 ui-kit__title">Заголовки</h2>
+            <h2 class="title-h1 text-center ui-kit__mb">Типографика</h2>
+            <h2 class="title-h1 ui-kit__mb">Заголовок H1</h2>
+            <h2 class="title-h2 ui-kit__mb">Заголовок H2</h2>
+            <h3 class="title-h3 ui-kit__mb">Заголовок H3</h3>
+            <p class="ui-kit__mb">Основной текст</p>
+            <p class="text-sm">Маленький текст</p>
         </div>
     
+        <div class="ui-kit__block">
+            <h2 class="title-h1 text-center ui-kit__mb">Кнопки</h2>
+            <button class="btn btn-main ui-kit__mb">Получить QR-код</button>
+            <form action="#" class="form">
+                <button class="btn btn-main btn-big">Войти</button>
+            </form>            
+        </div>
+
     </div>
+
+    <div class="container-sm">
+        <div class="ui-kit__block">
+            <h2 class="title-h1 text-center ui-kit__mb">Табы</h2>
+
+            <div class="js-tabs">
+                <div class="tab-links js-tabs-slider">
+                    <a href="#tab1" class="tab-links__item active js-tab-link">Прогулочные билеты</a>
+                    <a href="#tab2" class="tab-links__item js-tab-link">SPA и бани</a>
+                    <a href="#tab3" class="tab-links__item js-tab-link">Рестораны</a>
+                    <a href="#tab4" class="tab-links__item js-tab-link">Развлечения</a>
+                    <a href="#tab5" class="tab-links__item js-tab-link">Для детей</a>
+                </div>
+            
+                <div class="tab-content">
+                    <div id="tab1" class="tab-content__item active js-tab-content">tab1</div>
+                    <div id="tab2" class="tab-content__item js-tab-content">tab2</div>
+                    <div id="tab3" class="tab-content__item js-tab-content">tab3</div>
+                    <div id="tab4" class="tab-content__item js-tab-content">tab4</div>
+                    <div id="tab5" class="tab-content__item js-tab-content">tab5</div>
+                </div>
+            </div>
+        </div>
+    </div>        
+    
 </div>
