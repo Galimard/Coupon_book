@@ -6,6 +6,8 @@ $(document).ready(function() {
         arrows: true,
         dots: false,
         variableWidth: true,
+        nextArrow: '<button type="button" class="slick-next"><span class="pseudo"></span></button>',
+        prevArrow: '<button type="button" class="slick-prev"><span class="pseudo"></span></button>',
         responsive: [{
             breakpoint: 768,
             settings: {

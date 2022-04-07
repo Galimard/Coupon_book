@@ -15,7 +15,7 @@ title: UI-KIT
             <h2 class="title-h1 text-center ui-kit__mb">Типографика</h2>
             <h2 class="title-h1 ui-kit__mb">Заголовок H1</h2>
             <h2 class="title-h2 ui-kit__mb">Заголовок H2</h2>
-            <h3 class="title-h3 ui-kit__mb">Заголовок H3</h3>
+            <h3 class="title-h3 ui-kit__mb"><span>Заголовок H3</span><span class="title-count">17</span></h3>
             <p class="ui-kit__mb">Основной текст</p>
             <p class="text-sm">Маленький текст</p>
         </div>
@@ -26,6 +26,69 @@ title: UI-KIT
             <form action="#" class="form">
                 <button class="btn btn-main btn-big">Войти</button>
             </form>            
+        </div>
+
+        <div class="ui-kit__block">
+            <h2 class="title-h1 text-center ui-kit__mb">Форма</h2>
+
+            <form action="#" class="auth-form form js-form ui-kit__mb" novalidate>
+                <p class="form__title">Привет! Для использования платформы, авторизуйтесь под личным аккаунтом</p>
+                
+                <label class="form-item">
+                    <input class="form-item__input js-changed" type='text' name="name" required/>
+                    <span class="form-item__name">Логин</span>
+                </label>
+                
+                <label class="form-item">
+                    <input class="form-item__input js-changed" type='password' name="name" required/>
+                    <span class="form-item__name">Пароль</span>
+                </label>
+
+                <div class="form__error text-sm js-message"></div>
+                <button class="btn btn-main btn-big form__btn" type="submit">Войти</button>
+                <p class="form__policy text-sm">Нажимая кнопку «Войти» вы соглашетесь с <a href="#" target="_black" class="form__policy-link">правилами обработки персональных данных</a></p>
+            </form>
+
+            <form action="#" class="auth-form form js-form" novalidate>
+                <div id="select-book"></div>
+
+                <fieldset>
+                    <legend class="form__subtitle">Даты прибывания гостей</legend>
+
+                    <div class="form__row">
+                        <label class="form-item">
+                            <input id="date" class="form-item__input js-changed" type='text' name="date" required/>
+                            <span class="form-item__name">Прибытие</span>
+                        </label>
+                        <label class="form-item">
+                            <input id="date" class="form-item__input js-changed" type='text' name="date" required/>
+                            <span class="form-item__name">Выезд</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="form__subtitle">Какое будет количество гостей?</legend>
+                </fieldset>
+                
+                <fieldset>
+                    <legend class="form__subtitle">Контактные данные</legend>
+
+                    <label class="form-item">
+                        <input class="form-item__input js-changed" type='text' name="name" required/>
+                        <span class="form-item__name">Имя гостя</span>
+                    </label>
+                    
+                    <label class="form-item">
+                        <input class="form-item__input js-changed" type='tel' name="phone" required/>
+                        <span class="form-item__name">Телефон гостя</span>
+                    </label>
+                </fieldset>
+                
+                <div class="form__error text-sm js-message"></div>
+                <button class="btn btn-main btn-big form__btn" type="submit">Сгенерировать</button>
+                <p class="form__policy text-sm">Нажимая на кнопку «Сгенерировать купонную книгу» вы подтверждаете отправку СМС на телефон гостя с ссылкой на сгенерированную купонную книгу</p>
+            </form>
         </div>
 
     </div>
@@ -49,6 +112,165 @@ title: UI-KIT
                     <div id="tab3" class="tab-content__item js-tab-content">tab3</div>
                     <div id="tab4" class="tab-content__item js-tab-content">tab4</div>
                     <div id="tab5" class="tab-content__item js-tab-content">tab5</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui-kit__block">
+            <h2 class="title-h1 text-center ui-kit__mb">Карточки</h2>
+
+            <div class="card ui-kit__mb">
+                <div class="card-left">
+                    <div class="card-left__inner">
+                        <div class="card__qr"></div>
+                        <div class="card-price">
+                            <p class="card-price__text text-sm">Стоимость по купону</p>
+                            <p>
+                                <span class="card-price__old">350 ₽</span>
+                                <span>Бесплатно</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-dots">
+                        <div class="card-dots__dot-big"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot-big"></div>
+                    </div>
+                </div>
+                
+                <div class="card-right">
+                    <div class="card-dots">
+                        <div class="card-dots__dot-big"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot-big"></div>
+                    </div>
+
+                    <div class="card-right__inner">
+                        <div class="card-tags">
+                            <span class="card-tags__item text-bold text-sm">Поляна 540 –2200</span>
+                            <span class="card-tags__item text-bold text-sm">Детский</span>
+                        </div>
+                        <h2 class="title-h2 card__title">Прогулочный билет панорама 2200</h2>
+                        <p class="card__descr truncate truncate-4">Тариф действует на один подъем и один спуск по канатным дорогам «Красная Поляна», «Реликтовый лес» и «Вершина» с 9:00 до 18:00...</p>
+                        <a href="#" class="card__showmore">Показать полностью...</a>
+                        <p class="card__sm-title text-sm">Где воспользоваться?</p>
+                        <p>Терминал в здании ИЦ на 540</p>
+                        <a href="#" class="card__btn btn btn-main">Получить QR-код</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card rotate">
+                <div class="card-left">
+                    <div class="card-left__inner">
+                        <p class="title-h3 card__title">Купон уже использован</p>
+                    </div>
+                    <div class="card-dots">
+                        <div class="card-dots__dot-big"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot-big"></div>
+                    </div>
+                </div>
+                
+                <div class="card-right">
+                    <div class="card-dots">
+                        <div class="card-dots__dot-big"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot-big"></div>
+                    </div>
+
+                    <div class="card-right__inner">
+                        <div class="card-tags">
+                            <span class="card-tags__item text-bold text-sm">Поляна 540 –2200</span>
+                            <span class="card-tags__item text-bold text-sm">Взрослый</span>
+                        </div>
+                        <h2 class="title-h2 card__title">Банный комплекс 4 стихии</h2>
+                        <p class="card__descr truncate truncate-4">Процедура парения в большом банном комплексе</p>
+                        <p class="card__sm-title text-sm">Где воспользоваться?</p>
+                        <p>Вставьте промокод в специальную форму при оплаче через сайт</p>
+                        <a href="#" class="card__btn btn btn-main">Перейти на сайт</a>
+                    </div>
                 </div>
             </div>
         </div>

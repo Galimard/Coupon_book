@@ -1,0 +1,143 @@
+.card {
+    display: flex;
+    min-height: 285px;
+
+    &__qr {
+        width: 180px;
+        height: 180px;
+        border-radius: 16px;
+        background: $midGrey url('/assets/images/qr-sm.svg') center center no-repeat;
+    }
+    
+    &__title {
+        margin-bottom: $space * 3;
+    }
+
+    &__descr {
+        margin-bottom: $space * 2;
+    }
+
+    &__showmore {
+        color: $darkGrey;
+        flex: auto;       
+    }
+
+    &__sm-title {
+        color: $darkGrey;
+        margin-top: $space * 4;
+        margin-bottom: $space;
+    }
+
+    &__btn {
+        margin-top: $space * 4;
+    }
+
+    &-price {
+        &__text {
+            color: $darkGrey;
+            margin-bottom: $space;
+        }
+
+        &__old {
+            color: $grey;
+            text-decoration: line-through;
+            margin-right: $space * 2;
+        }
+    }
+}
+
+.card-left {        
+    width: 228px;
+    background: $lightGrey;
+    border-radius: 16px;
+    position: relative;
+
+    &__inner {
+        padding: $space * 6;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .card-dots {
+        right: -12px;
+    }
+}
+
+.card-right {
+    width: 333px;
+    background: $lightGrey;
+    border-radius: 16px;
+    position: relative;
+
+    &__inner {
+        padding: $space * 6;
+        display: flex;
+        flex-direction: column;
+        min-height: 285px;
+    }
+
+    .card-dots {
+        left: -12px;
+    }
+}
+
+.card.rotate {
+    .card-left {
+        transform: rotate(-5deg);
+        transform-origin: right bottom;
+    }
+
+    .card-left__inner {
+        justify-content: center;
+    }
+
+    .card__title {
+        text-align: center;
+    }
+}
+
+.card-dots {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -($space * 3);
+    margin-bottom: -($space * 3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    &__dot {
+        width: 6px;
+        height: 6px;
+        background: $white;
+        border-radius: 50%;
+    }
+
+    &__dot-big {
+        width: 24px;
+        height: 24px;
+        background: $white;
+        border-radius: 50%;
+    }
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4px 16px;
+
+    &__item {
+        background: $mainText;
+        border-radius: 6px;
+        padding: $space ($space * 2);
+        color: $white;
+        margin: 0 $space;
+    }
+
+    &__item:not(:nth-last-child(-n+3)) {
+        margin-bottom: $space * 2;
+    }
+}

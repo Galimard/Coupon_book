@@ -1,5 +1,5 @@
 .btn {
-    display: block;
+    display: inline-block;
     border-radius: 8px;
     padding: ($space * 3) ($space * 4);
     border: none;
@@ -16,6 +16,7 @@
 
     &:hover {
         background: $redDark;
+        color: $white;
         transition: background-color 0.3s ease;
     }
 }

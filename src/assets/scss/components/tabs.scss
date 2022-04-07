@@ -38,7 +38,6 @@
             margin: 0;
         }
     }
-
     
     .slick-prev:before, 
     .slick-next:before {
@@ -48,75 +47,45 @@
 
     .slick-prev, 
     .slick-next {
-        width: 32px;
-        height: 32px;
-        box-shadow: 0px 8px 16px $shadow;
-        border-radius: 50%;
         z-index: 1;
     }
 
     .slick-prev {
-        background: $white url('../images/arrow-left.svg') center center no-repeat;
-        left: 4px;
+        width: 62px;
+        height: 40px;
+        background: linear-gradient(to right, #ffffff 40%, rgba(255, 255, 255, 0) 99.81%);
+        left: 0;
 
-        // &::after {
-        //     content: '';
-        //     display: block;
-        //     width: 62px;
-        //     height: 40px;
-        //     background: linear-gradient(to right, #ffffff 40%, rgba(255, 255, 255, 0) 98%);
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     z-index: 1;
-        // }
+        .pseudo {
+            display: block;
+            background: $white url('../images/arrow-left.svg') center center no-repeat;
+            width: 32px;
+            height: 32px;
+            box-shadow: 0px 8px 16px $shadow;
+            border-radius: 50%;
+            margin-right: auto;
+        }
     }
 
     .slick-next {
-        background: $white url('../images/arrow-right.svg') center center no-repeat;
-        right: 4px;
-
-        // &::after {
-            // content: '';
-            // display: block;
-            // width: 62px;
-            // height: 40px;
-            // background: linear-gradient(to left, #ffffff 40%, rgba(255, 255, 255, 0) 99.81%);
-            // position: absolute;
-            // top: 0;
-            // right: 0;
-        // }
-    }
-
-    .slick-disabled {
-        display: none;
-    }
-}
-
-.js-tabs-slider.slick-slider {
-    position: relative;
-
-    &::before {
-        content: '';
-        display: block;
-        width: 62px;
-        height: 40px;
-        background: linear-gradient(to right, #ffffff 40%, rgba(255, 255, 255, 0) 98%);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-    }
-
-    &::after {
-        content: '';
-        display: block;
         width: 62px;
         height: 40px;
         background: linear-gradient(to left, #ffffff 40%, rgba(255, 255, 255, 0) 99.81%);
-        position: absolute;
-        top: 0;
         right: 0;
+
+        .pseudo {
+            display: block;
+            background: $white url('../images/arrow-right.svg') center center no-repeat;
+            width: 32px;
+            height: 32px;
+            box-shadow: 0px 8px 16px $shadow;
+            border-radius: 50%;
+            margin-left: auto;
+        }
+    }
+
+    .slick-disabled {
+        display: none !important;
     }
 }
 

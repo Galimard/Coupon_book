@@ -37,3 +37,21 @@ a:hover {
 .text-center {
     text-align: center;
 }
+
+.truncate {
+    display: -webkit-box;     
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.truncate-4 {
+    -webkit-line-clamp: 4; 
+}
+
+.title-count {
+    background: $lightGrey;
+    border-radius: 21px;
+    padding: $space ($space * 3);
+    font-weight: 700;
+    margin-left: $space * 2;
+}
