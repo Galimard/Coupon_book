@@ -14,34 +14,36 @@
 
     &__dropdown {
         display: none;
+        width: 100%;
+        max-height: 190px;
+        background: $white;
+        box-shadow: 0px 8px 16px $shadow;
+        border-radius: 8px;
+        padding: 6px 0;
         position: absolute;
-        z-index: 101;
-        // border: 1px solid $mainColor;
-        top: 53px;
+        top: 61px;
         left: 0;
         right: 0;
-        width: 220px;
-        max-height: 200px;
+        z-index: 101;
         overflow-y: auto;
-        // box-shadow: 0px 0px 20px $btnShadow;
     
         &::-webkit-scrollbar{
             width: 5px;
-            // background: $bgDark;
+            background: $white;
             border-radius: 14px;
         }
     
         &::-webkit-scrollbar-thumb {
-            // background: $mainColor;
+            background: $grey;
             border-radius: 14px;
         }
     }
 
     &__dropdown--multiselect {
         width: 100%;
-        // background: $bgLight;
+        background: $white;
+        box-shadow: 0px 8px 16px $shadow;
         border: none;
-        // box-shadow: 0px 4px 20px $btnShadow;
         top: 38px;
     }
 
@@ -83,7 +85,7 @@
             display: block;
             width: 30px;
             height: 30px;
-            // border: 1px solid $mainColorLight;
+            border: 1px solid $mainText;
             margin-right: 20px;
             position: absolute;
             top: -2px;
@@ -99,21 +101,21 @@
         opacity: 0;
     }
 
-    &__input--checkbox:checked + &__name--checkbox::after {
+    // &__input--checkbox:checked + &__name--checkbox::after {
         // background: $mainColorLight url('/assets/images/icons/checkbox-light.svg') center center no-repeat;
-    }
+    // }
 }
 
 .select-ui.open .select-ui__dropdown {
-        display: block;
+    display: block;
 }
 
 .select-ui.open .select-ui__input{
     cursor: pointer;
 
     &::after,
-    &--without-frame::after {
-        transform: rotate(-45deg);
+    &--multiselect::after {
+        transform: translateY(-50%) rotate(-180deg);
     }
 }
 
@@ -129,11 +131,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: ($space * 3.5) ($space * 3) ($space * 3.75) ($space * 3.5);
-    // border: 1px solid $mainColorLight;
-    height: 48px;
-    font-size: 16px;
-    line-height: 1.2;
+    padding: ($space * 4.25) ($space * 3);
+    background: $white;
+    box-shadow: 0px 8px 16px $shadow;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.43;
     cursor: pointer;
 
     span {
@@ -145,6 +148,8 @@
         padding-right: $space * 5;
     }
 
+    
+
     &-name {
         position: absolute;
         opacity: 0;
@@ -154,24 +159,30 @@
     &--multiselect::after {
         content: "";
         display: block;
-        width: 10px;
-        height: 10px;
-        // border-top: 1px solid $mainColor;
-        // border-right: 1px solid $mainColor;
+        width: 16px;
+        height: 16px;
+        background: url('/assets/images/arrow-down.svg') center center no-repeat;
         position: absolute;
         right: 20px;
-        top: 45%;
+        top: 50%;
         z-index: 1;
-        transform: translateY(-50%) rotate(135deg);
+        transform: translateY(-50%);
         transition: transform 0.2s;
     }
 
     &.selected {
+        padding: ($space * 6.25) ($space * 3) ($space * 2.25); 
+
         .select-ui__input-name {
             opacity: 1;
             font-size: 14px;
-            transform: translate(-13px, -33px);
+            transform: translate(0, -10px);
             transition: all 0.3s ease;
+        }
+
+        span[data-type='value'] {
+            font-weight: 700;
+            color: $mainText;
         }
     }
 
@@ -182,15 +193,15 @@
         padding-right: 35px;
     }
 
-    &--multiselect::after {
+    // &--multiselect::after {
         // border-top: 1px solid $mainTextDark;
         // border-right: 1px solid $mainTextDark;
-    }
+    // }
 
-    &-link {
+    // &-link {
         // color: $mainColor;
         // border-bottom: 1px dotted $mainColor;        
-    }
+    // }
 
     &-truncate {
         display: block;
@@ -205,31 +216,21 @@
 }
 
 .select-ui__item {
-    padding: 1rem 1rem 1rem 1.3rem;
-    // background: $bgLight;
-    font-size: 16px;
-    font-weight: 400;
+    padding: 10px 12px;
+    font-size: 14px;
+    line-height: 1.43;
+    color: $mainText;
 
     &:hover {
-        // color: $mainColor;
+        background: $lightGrey;
         cursor: pointer;
-        transition: color 0.3s ease;
+        transition: all 0.3s ease;
     }
 
     &.selected {
+        font-weight: 700;
         position: relative;
-
-        &::after {
-            content: '';
-            display: block;
-            width: 25px;
-            height: 25px;
-            background: url('../images/icons/check-dark.svg') center center no-repeat;
-            position: absolute;
-            top: 50%;
-            right: 24px;
-            transform: translateY(-50%);
-        }
+        pointer-events: none;
     }
 }
 

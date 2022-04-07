@@ -134,7 +134,7 @@ class SelectUI{
         });        
         this.$el.querySelector(`[data-id="${id}"]`).classList.add('selected');
 
-        // this.$input.classList.add('selected'); //для лейбла
+        this.$input.classList.add('selected'); //для лейбла
         // if (this.$el.nextElementSibling) { //чтобы не было ошибки и лейбла одновременно
         //     this.$inputName.style.display = 'none';
         // }        

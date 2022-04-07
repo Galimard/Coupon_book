@@ -10,6 +10,23 @@
         text-align: center;
     }
 
+    &__fieldset {
+        margin-bottom: $space * 6;
+    }
+
+    &__subtitle {
+        margin-bottom: $space * 3;
+    }
+
+    &__row {
+        display: flex;
+        margin: 0 -$space;
+
+        .form-item {
+            margin: 0 $space 0 !important;
+        }
+    }
+
     &__btn {
         margin-top: $space * 6;
         margin-bottom: $space * 4;

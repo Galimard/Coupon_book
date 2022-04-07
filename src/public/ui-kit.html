@@ -50,28 +50,30 @@ title: UI-KIT
             </form>
 
             <form action="#" class="auth-form form js-form" novalidate>
-                <div id="select-book"></div>
+                <fieldset class="form__fieldset">
+                    <div id="select-book"></div>
+                </fieldset>                
 
-                <fieldset>
+                <fieldset class="form__fieldset">
                     <legend class="form__subtitle">Даты прибывания гостей</legend>
 
                     <div class="form__row">
                         <label class="form-item">
-                            <input id="date" class="form-item__input js-changed" type='text' name="date" required/>
+                            <input id="date-begin" class="form-item__input js-changed" type='text' name="date" required autocomplete="off"/>
                             <span class="form-item__name">Прибытие</span>
                         </label>
                         <label class="form-item">
-                            <input id="date" class="form-item__input js-changed" type='text' name="date" required/>
+                            <input id="date-end" class="form-item__input js-changed" type='text' name="date" required autocomplete="off"/>
                             <span class="form-item__name">Выезд</span>
                         </label>
                     </div>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="form__fieldset">
                     <legend class="form__subtitle">Какое будет количество гостей?</legend>
                 </fieldset>
                 
-                <fieldset>
+                <fieldset class="form__fieldset">
                     <legend class="form__subtitle">Контактные данные</legend>
 
                     <label class="form-item">
@@ -80,7 +82,7 @@ title: UI-KIT
                     </label>
                     
                     <label class="form-item">
-                        <input class="form-item__input js-changed" type='tel' name="phone" required/>
+                        <input class="form-item__input js-changed js-input-phone" type='tel' name="phone" required/>
                         <span class="form-item__name">Телефон гостя</span>
                     </label>
                 </fieldset>
