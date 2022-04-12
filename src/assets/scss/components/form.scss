@@ -88,4 +88,69 @@
         transform: translate(0, -10px);
         transition: all 0.3s ease;
     }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+
+    &__button {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border: none;
+    }
+
+    &__button--minus {
+        background: url('../images/minus.svg') center center no-repeat;
+    }
+
+    &__button--minus.disabled {
+        background: url('../images/minus-dis.svg') center center no-repeat;
+        pointer-events: none;
+    }
+
+    &__button--plus {
+        background: url('../images/plus.svg') center center no-repeat;
+    }
+
+    &__button--plus.disabled {
+        background: url('../images/plus-dis.svg') center center no-repeat;
+        pointer-events: none;
+    }
+
+    &__count {
+        width: 25px;
+        color: $mainText;
+        font-weight: 700;
+        margin: 0 $space;
+        text-align: center;
+    }
+}
+
+.form-item--guest {
+    input {
+        height: 54px;
+        font-size: 0;
+    }
+
+    .form-item__label--guest {
+        position: absolute;
+        top: 9px;
+        left: 12px;
+        font-weight: 700;
+        color: $mainText;
+    }
+
+    .form-item__name--guest {
+        position: absolute;
+        top: 29px;
+        left: 12px;
+        font-size: 12px;
+        line-height: 16px;
+    }
 }

@@ -15,6 +15,14 @@
 
 @font-face {
     font-family: 'Inter';
+    src: url('../fonts/Inter-Medium.woff2') format('woff2');
+    src: url('../fonts/Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
     src: url('../fonts/Inter-Bold.woff2') format('woff2');
     src: url('../fonts/Inter-Bold.woff') format('woff');
     font-weight: 700;
@@ -60,6 +68,8 @@ body.no-scroll{
 @import "components/tabs.scss";
 @import "components/card.scss";
 @import "components/select-ui.scss";
+@import "components/select-ui-children.scss";
+@import "components/datepicker-custom.scss";
 
 /* Pages */
 @import "pages/ui-kit.scss";

@@ -51,7 +51,10 @@ title: UI-KIT
 
             <form action="#" class="auth-form form js-form" novalidate>
                 <fieldset class="form__fieldset">
-                    <div id="select-book"></div>
+                    <div class="select-ui"></div>
+                </fieldset>
+                <fieldset class="form__fieldset">
+                    <div class="select-ui"></div>
                 </fieldset>                
 
                 <fieldset class="form__fieldset">
@@ -71,6 +74,42 @@ title: UI-KIT
 
                 <fieldset class="form__fieldset">
                     <legend class="form__subtitle">Какое будет количество гостей?</legend>
+
+                    <label class="form-item form-item--guest js-input-guest">
+                        <input id="adult" class="form-item__input js-changed" type='text' name="adult" data-type="input" required />
+                        <span class="form-item__label--guest">Взрослые</span>
+                        <span class="form-item__name--guest">Старше 18 лет</span>
+                        <div class="form-item__buttons">
+                            <button class="form-item__button form-item__button--minus js-minus disabled" type="button"></button>
+                            <span class="form-item__count js-count-guest">0</span>
+                            <button class="form-item__button form-item__button--plus js-plus" type="button"></button>
+                        </div>
+                    </label>
+                    
+                    <label class="form-item form-item--guest js-input-guest">                         
+                        <input id="children" class="form-item__input js-changed" type='text' name="adult" data-type="input" required />
+                        <span class="form-item__label--guest">Дети</span>
+                        <span class="form-item__name--guest">От 0 до 18 лет</span>
+                        <div class="form-item__buttons">
+                            <button class="form-item__button form-item__button--minus js-minus disabled" type="button"></button>
+                            <span class="form-item__count js-count-guest">0</span>
+                            <button class="form-item__button form-item__button--plus js-plus" type="button"></button>
+                        </div>
+                    </label>
+                    <div class="js-select-children"></div>
+                
+                    <label class="form-item form-item--guest js-input-guest">                         
+                        <input id="children2" class="form-item__input js-changed" type='text' name="adult" data-type="input" required />
+                        <span class="form-item__label--guest">Дети</span>
+                        <span class="form-item__name--guest">От 0 до 18 лет</span>
+                        <div class="form-item__buttons">
+                            <button class="form-item__button form-item__button--minus js-minus disabled" type="button"></button>
+                            <span class="form-item__count js-count-guest">0</span>
+                            <button class="form-item__button form-item__button--plus js-plus" type="button"></button>
+                        </div>
+                    </label>
+                    <div class="js-select-children"></div>
+                    
                 </fieldset>
                 
                 <fieldset class="form__fieldset">

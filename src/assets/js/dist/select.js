@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){  
-    if (document.querySelector('#select-book')) {
-        const selectBook = new SelectUI('#select-book', {
+    if (document.querySelector('.select-ui')) {
+        const selectBook = new SelectUI('.select-ui', {
             placeholder: 'Тип книги',
             errorText: 'Выберите тип книги',
             nameSelect: 'select-book',
