@@ -1,5 +1,6 @@
 .tab-links {
-    margin: 0 -($space);
+    margin-left: calc((100% - #{$csm-992}) / 2 + 24px);
+    margin-right: calc((100% - #{$csm-992}) / 2 + 24px);  
 
     &__item {
         border-radius: 21px;
@@ -9,7 +10,7 @@
         line-height: 20px;
         text-align: center;
         margin: 0 $space;
-        background: $grey;
+        background: $lightGrey;
         color: $mainText;
         white-space: nowrap;
         transition: all 0.3s ease;
@@ -103,8 +104,21 @@
     }
 }
 
+@include breakpoint($bp-768) {
+    .tab-links {
+        margin-left: calc((100% - #{$csm-768}) / 2 + 24px);
+        margin-right: 0;
+    }
+}
+
 @include breakpoint($bp-576) {
     .tab-links {
-        margin-right: -($space * 6);
+        margin-left: calc((100% - #{$csm-576}) / 2 + 24px);
+    }
+}
+
+@include breakpoint($bp-360) {
+    .tab-links {
+        margin-left: calc((100% - #{$csm-360}) / 2);
     }
 }

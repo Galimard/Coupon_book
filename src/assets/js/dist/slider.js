@@ -14,6 +14,14 @@ $(document).ready(function() {
               arrows: false,
               dots: false
             }      
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToScroll: 1,
+                arrows: false,
+                dots: false
+            }      
         }]
     });
 });

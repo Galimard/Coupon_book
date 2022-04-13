@@ -1,13 +1,25 @@
 .container {
     max-width: 540px;
-    padding: 0 ($space * 5);
+    padding: 0 ($space * 6);
     margin: 0 auto;
 }
 
 .container-sm {
-    max-width: 360px;
+    max-width: 303px;
     padding: 0 ($space * 6);
     margin: 0 auto;
+}
+
+@include breakpointMin($bp-360) {
+    .container-sm {
+        max-width: 312px;
+    }
+}
+
+@include breakpointMin($bp-576) {
+    .container-sm {
+        max-width: 524px;
+    }
 }
 
 @include breakpointMin($bp-768) {

@@ -43,7 +43,7 @@ class Form {
                         const handleSubmitResult = that.handleSubmit();
                         
                         if (handleSubmitResult.result) {
-                            that.showSuccessMessage(el);
+                            that.showNextStep(el);
                         } else {
                             that.showErrorMessage(el, handleSubmitResult.error);
                         }                        
@@ -59,5 +59,13 @@ class Form {
     showErrorMessage = (el, error) => {
         const $error = el.querySelector('.js-message');
         $error.innerHTML = error;
+    }
+
+    showNextStep = (el) => {
+        const nextStep = el.nextElementSibling;
+
+        el.classList.add('hide');
+
+        if (nextStep.classList.contains('reg-form')) nextStep.classList.add('active');
     }
 }

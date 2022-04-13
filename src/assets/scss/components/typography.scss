@@ -44,6 +44,12 @@ a:hover {
     overflow: hidden;
 }
 
+.truncate-1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .truncate-4 {
     -webkit-line-clamp: 4; 
 }

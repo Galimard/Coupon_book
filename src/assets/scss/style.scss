@@ -61,6 +61,7 @@ body.no-scroll{
 @import "layout/page.scss";
 
 /* Components */
+@import "components/header.scss";
 @import "components/typography.scss";
 @import "components/logo.scss";
 @import "components/button.scss";
@@ -68,8 +69,10 @@ body.no-scroll{
 @import "components/tabs.scss";
 @import "components/card.scss";
 @import "components/select-ui.scss";
-@import "components/select-ui-children.scss";
 @import "components/datepicker-custom.scss";
+@import "components/info.scss";
 
 /* Pages */
 @import "pages/ui-kit.scss";
+@import "pages/panel.scss";
+@import "pages/book.scss";

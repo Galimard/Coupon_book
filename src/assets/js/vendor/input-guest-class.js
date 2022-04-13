@@ -37,13 +37,9 @@ class InputGuest {
         this.checkDisabled(this.count, this.$minusBtn);
 
         if (this.$childrenList.classList.contains(this.childrenClass)) {
-            // const selectBook = new SelectUI('.' + this.childrenClass, {
-            //     selectChildren: true,
-            //     countSelectChildren: this.count,
-            //     parent: el
-            // });
-            const selectChild = new SelectUIChildren(this.childrenClass, {
-                ages: this.count,
+            const selectChild = new SelectUI('.' + this.childrenClass, {
+                selectChildren: true,
+                countSelectChildren: this.count,
                 parent: el
             });
         }        
@@ -62,6 +58,14 @@ class InputGuest {
         this.$input.value = this.count;
 
         this.checkDisabled(this.count, this.$minusBtn);
+
+        if (this.$childrenList.classList.contains(this.childrenClass)) {
+            const selectChild = new SelectUI('.' + this.childrenClass, {
+                selectChildren: true,
+                countSelectChildren: this.count,
+                parent: el
+            });
+        }
     }
 
     checkDisabled = (count, minusBtn) => {

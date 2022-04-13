@@ -1,0 +1,101 @@
+---
+layout: default
+title: Панель менеджера
+---
+
+<div class="panel-page">
+    <div class="container">
+
+        <div class="panel">
+            <a href="/" class="logo panel__logo"></a>
+            <p class="panel__text">Платформа генерации купонной книги</p>
+    
+            <form action="#" class="auth-form form js-form" novalidate>
+                <p class="form__title">Привет! Для использования платформы, авторизуйтесь под личным аккаунтом</p>
+                
+                <label class="form-item">
+                    <input class="form-item__input js-changed" type='text' name="name" required autocomplete="off"/>
+                    <span class="form-item__name">Логин</span>
+                </label>
+                
+                <label class="form-item">
+                    <input class="form-item__input js-changed" type='password' name="name" required/>
+                    <span class="form-item__name">Пароль</span>
+                </label>
+    
+                <div class="form__error text-sm js-message"></div>
+                <button class="btn btn-main btn-big form__btn" type="submit">Войти</button>
+                <p class="form__policy text-sm">Нажимая кнопку «Войти» вы соглашетесь с <a href="#" target="_black" class="form__policy-link">правилами обработки персональных данных</a></p>
+            </form>
+
+            <form action="#" class="reg-form form js-form" novalidate>
+                <fieldset class="form__fieldset">
+                    <div class="select-ui"></div>
+                </fieldset>               
+
+                <fieldset class="form__fieldset">
+                    <legend class="form__subtitle">Даты прибывания гостей</legend>
+
+                    <div class="form__row">
+                        <label class="form-item">
+                            <input id="date-begin" class="form-item__input js-changed" type='text' name="date" required autocomplete="off"/>
+                            <span class="form-item__name">Прибытие</span>
+                        </label>
+                        <label class="form-item">
+                            <input id="date-end" class="form-item__input js-changed" type='text' name="date" required autocomplete="off"/>
+                            <span class="form-item__name">Выезд</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form__fieldset">
+                    <legend class="form__subtitle">Какое будет количество гостей?</legend>
+
+                    <label class="form-item form-item--guest js-input-guest">
+                        <input id="adult" class="form-item__input js-changed" type='text' name="adult" data-type="input" required />
+                        <span class="form-item__label--guest">Взрослые</span>
+                        <span class="form-item__name--guest">Старше 18 лет</span>
+                        <div class="form-item__buttons">
+                            <button class="form-item__button form-item__button--minus js-minus disabled" type="button"></button>
+                            <span class="form-item__count js-count-guest">0</span>
+                            <button class="form-item__button form-item__button--plus js-plus" type="button"></button>
+                        </div>
+                    </label>
+                    
+                    <label class="form-item form-item--guest js-input-guest">                         
+                        <input id="children" class="form-item__input js-changed" type='text' name="adult" data-type="input" required />
+                        <span class="form-item__label--guest">Дети</span>
+                        <span class="form-item__name--guest">От 0 до 18 лет</span>
+                        <div class="form-item__buttons">
+                            <button class="form-item__button form-item__button--minus js-minus disabled" type="button"></button>
+                            <span class="form-item__count js-count-guest">0</span>
+                            <button class="form-item__button form-item__button--plus js-plus" type="button"></button>
+                        </div>
+                    </label>
+                    <div class="js-select-children"></div>                    
+                </fieldset>
+                
+                <fieldset class="form__fieldset">
+                    <legend class="form__subtitle">Контактные данные</legend>
+
+                    <label class="form-item">
+                        <input class="form-item__input js-changed" type='text' name="name" required/>
+                        <span class="form-item__name">Имя гостя</span>
+                    </label>
+                    
+                    <label class="form-item">
+                        <input class="form-item__input js-changed js-input-phone" type='tel' name="phone" required/>
+                        <span class="form-item__name">Телефон гостя</span>
+                    </label>
+                </fieldset>
+                
+                <div class="form__error text-sm js-message"></div>
+                <button class="btn btn-main btn-big form__btn" type="submit">Сгенерировать</button>
+                <p class="form__policy text-sm">Нажимая на кнопку «Сгенерировать купонную книгу» вы подтверждаете отправку СМС на телефон гостя с ссылкой на сгенерированную купонную книгу</p>
+            </form>
+    
+            <p class="copyright panel__copyright">©2022 – НАО «Красная поляна»</p>
+        </div>
+        
+    </div>
+</div>

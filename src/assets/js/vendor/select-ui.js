@@ -11,7 +11,7 @@ class SelectUI{
         this.nameSelect = options.nameSelect || 'select';
         this.fakeSelect = document.querySelector('.select-ui-fake'); 
         this.onSelect = options.onSelect;  
-        // this.selectChildren = options.selectChildren;
+        this.selectChildren = options.selectChildren;
         this.valueInput = '';   
         this.arrValues = [];    
 
@@ -21,36 +21,33 @@ class SelectUI{
 
     render(){        
         this.$elements.forEach(el => {
-        //     if (this.selectChildren) {
-        //         this.parent = this.options.parent;
-        //         this.countSelectChildren = this.options.countSelectChildren;                
-        //     } else {
+            if (this.selectChildren) {
+                this.parent = this.options.parent;
+                this.countSelectChildren = this.options.countSelectChildren;                
+            } else {
                 el.innerHTML = this.getTemplate();
                 this.hideFakeSelect();
                 this.setup(el);
-        //     }           
+            }           
         });  
         
-        // if (this.selectChildren) this.renderChildrenSelects(); 
+        if (this.selectChildren) this.renderChildrenSelects(); 
     }
 
     renderChildrenSelects = () => {
         let childrenList = this.parent.nextElementSibling;
         childrenList.innerHTML = '';
-        // console.log(childrenList);
+        
         for (let i = 0; i < this.countSelectChildren; i++) {
-            // console.log(i);
             childrenList.insertAdjacentHTML("beforeend", 
             `<div class="select-children__item" data-type="num">
-                <div class="select-ui"></div>
-            </div>`);
-
-            const selectNumberRooms = new SelectUI('.select-ui', {
+                <div class="select-ui-children select-ui-children-${i + 1}"></div>
+            </div>`);    
+            
+            const selectChildren = new SelectUI('.select-ui-children-' + (i + 1), {
                 placeholder: `${i + 1} ребенок`,
                 errorText: 'Выберите возраст ребёнка',
                 nameSelect: `select-children-${i + 1}`,
-                // selectedId: this.countSelectChildren[i].toString(),
-                // selectedDataProp: this.ages[i].toString(), 
                 // onSelect: (el) => {this.addToAges()},
                 data: [
                     {id:"1",value:"до 1 года", dataProp:"0"},
@@ -74,6 +71,8 @@ class SelectUI{
                 ]
             });
         }
+
+        
     }
 
     setup(el){
@@ -161,7 +160,7 @@ class SelectUI{
 
     clickHandler(el, event){            
         const {type} = event.target.dataset;
-        
+        console.log(type);
         if (type === 'input' || type === 'value'){
             this.toggle(el);
         } else if (type === 'item'){
