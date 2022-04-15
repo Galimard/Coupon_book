@@ -46,6 +46,44 @@
         margin-top: $space * 4;
         padding: 0 ($space * 10);
     }
+
+    &__input-wrap {
+        display: block;
+        position: relative;
+    }
+
+    &__input-wrap-label {
+        position: absolute;
+        top: 19px;
+        left: 12px;
+        z-index: 1;
+    }
+
+    @include breakpoint($bp-576) {
+        &__row {
+            flex-direction: column;
+
+            .form-item {
+                margin-bottom: $space * 2 !important;
+            }
+        }
+    }
+}
+
+.form-select {
+    position: relative;
+    padding: 0 !important;
+    overflow: hidden;
+
+    select {
+        border: none;
+        padding: ($space * 4.75) ($space * 3);
+        width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        color: $darkGrey;
+    }
 }
 
 .form-item {
@@ -66,6 +104,26 @@
         -o-transition: box-shadow .3s ease;
         transition: box-shadow .3s ease;
         transition: box-shadow .3s ease, -webkit-box-shadow .3s ease;
+    }
+
+    &__input--date {
+        font-family: "Inter", "Arial", sans-serif;
+        padding: ($space * 4.75) ($space * 3);
+        color: $darkGrey;
+        font-weight: 400;
+    }
+
+    &__input--date::-webkit-calendar-picker-indicator {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        top: 0;
+        left: 0;    
+    }
+
+    &__input--date::-webkit-datetime-edit {
+        margin-left: 80px;
     }
 
     &:not(:last-child) {

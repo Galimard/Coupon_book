@@ -30,20 +30,41 @@ title: Панель менеджера
 
             <form action="#" class="reg-form form js-form" novalidate>
                 <fieldset class="form__fieldset">
-                    <div class="select-ui"></div>
-                </fieldset>               
+                    <div class="select-ui desktop"></div>
+
+                    <!-- Обычный селект для мобильной версии. Если не нужен, удалить весь блок form-select, а у блока select-ui, который расположен выше, удалить класс desktop -->
+                    <div class="form-select select-ui__input">
+                        <select name="type_book" class="mobile">
+                            <option value="1">Яркие весенние каникулы</option>
+                            <option value="2">Тип книги 2</option>
+                            <option value="3">Тип книги 3</option>
+                        </select>
+                    </div>                    
+                </fieldset>              
 
                 <fieldset class="form__fieldset">
                     <legend class="form__subtitle">Даты прибывания гостей</legend>
 
                     <div class="form__row">
                         <label class="form-item">
-                            <input id="date-begin" class="form-item__input js-changed" type='text' name="date" required autocomplete="off"/>
-                            <span class="form-item__name">Прибытие</span>
+                            <input id="date-begin" class="form-item__input js-changed desktop" type='text' name="date" required autocomplete="off"/>
+                            <span class="form-item__name desktop">Прибытие</span>
+
+                            <!-- Обычный инпут date для мобильной версии. Если не нужен, удалить блок form__input-wrap, а у блока form-item__name, который расположен выше, удалить класс desktop -->
+                            <label class="form__input-wrap">                                
+                                <input type="date" name="date" class="form-item__input form-item__input--date mobile">
+                                <span class="form__input-wrap-label">Прибытие</span> 
+                            </label>
                         </label>
                         <label class="form-item">
-                            <input id="date-end" class="form-item__input js-changed" type='text' name="date" required autocomplete="off"/>
-                            <span class="form-item__name">Выезд</span>
+                            <input id="date-end" class="form-item__input js-changed desktop" type='text' name="date" required autocomplete="off"/>
+                            <span class="form-item__name desktop">Выезд</span>
+
+                            <!-- Обычный инпут date для мобильной версии. Если не нужен, удалить блок form__input-wrap, а у блока form-item__name, который расположен выше, удалить класс desktop -->
+                            <label class="form__input-wrap">
+                                <input type="date" name="date" class="form-item__input form-item__input--date mobile">
+                                <span class="form__input-wrap-label">Выезд</span>
+                            </label>
                         </label>
                     </div>
                 </fieldset>

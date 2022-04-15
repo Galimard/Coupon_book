@@ -214,6 +214,7 @@
     font-size: 14px;
     line-height: 1.43;
     color: $mainText;
+    text-align: left;
 
     &:hover {
         background: $lightGrey;
@@ -229,7 +230,8 @@
 }
 
 .select-ui-children {
-    margin-left: 35px;
+    margin-left: auto;
+    width: 85%;
 
     &::before {
         content: '';
@@ -307,7 +309,19 @@
 @include breakpoint($bp-576) {
     .select-ui__input {
         &--multiselect {
-            font-size: 16px;
+            font-size: 16px;          
+        }
+    }    
+}
+
+@include breakpoint($bp-360) {
+    .select-ui__input {
+        &::after {
+            right: 12px;
+        }
+
+        span {
+            min-width: 80px;
         }
     }
 }

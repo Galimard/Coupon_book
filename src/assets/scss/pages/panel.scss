@@ -1,10 +1,24 @@
 .panel-page {
     display: flex;
     align-items: center;
-    height: 100%;
+    height: 100vh;
+
+    .mobile {
+        display: none;
+    }
 
     @include breakpoint($bp-576) {
         align-items: flex-start;
+        overflow: hidden;
+        height: 100%;
+
+        .mobile {
+            display: block;
+        }
+
+        .desktop {
+            display: none;
+        }
     }
 }
 
@@ -86,7 +100,8 @@
     }
 
     @include breakpoint($bp-576) {
-        width: 312px;
+        max-width: 312px;
+        width: 100%;
         padding: ($space * 6) 0;
     }
 }
