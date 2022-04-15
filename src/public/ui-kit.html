@@ -23,6 +23,7 @@ title: UI-KIT
         <div class="ui-kit__block">
             <h2 class="title-h1 text-center ui-kit__mb">Кнопки</h2>
             <button class="btn btn-main ui-kit__mb">Получить QR-код</button>
+            <button class="btn btn-grey ui-kit__mb">Показать QR-код</button>
             <form action="#" class="form">
                 <button class="btn btn-main btn-big">Войти</button>
             </form>            
@@ -148,7 +149,8 @@ title: UI-KIT
             <div class="card ui-kit__mb">
                 <div class="card-left">
                     <div class="card-left__inner">
-                        <div class="card__qr"></div>
+                        <button class="btn btn-grey card__show-btn js-show-qr"><span>Показать</span> QR-код</button>
+                        <div class="card__qr card__qr--qr"></div>                                        
                         <div class="card-price">
                             <p class="card-price__text text-sm">Стоимость по купону</p>
                             <p>
@@ -225,7 +227,7 @@ title: UI-KIT
                         </div>
                         <h2 class="title-h2 card__title">Прогулочный билет панорама 2200</h2>
                         <p class="card__descr truncate truncate-4">Тариф действует на один подъем и один спуск по канатным дорогам «Красная Поляна», «Реликтовый лес» и «Вершина» с 9:00 до 18:00...</p>
-                        <a href="#" class="card__showmore">Показать полностью...</a>
+                        <a href="javascript:void(0)" class="card__showmore" data-modal-ajax="modal-form">Показать полностью...</a>
                         <p class="card__sm-title text-sm">Где воспользоваться?</p>
                         <p>Терминал в здании ИЦ на 540</p>
                         <a href="#" class="card__btn btn btn-main">Получить QR-код</a>
@@ -233,7 +235,7 @@ title: UI-KIT
                 </div>
             </div>
 
-            <div class="card rotate">
+            <div class="card rotate ui-kit__mb">
                 <div class="card-left">
                     <div class="card-left__inner">
                         <p class="title-h3 card__title">Купон уже использован</p>
@@ -299,7 +301,107 @@ title: UI-KIT
                     </div>
                 </div>
             </div>
+
+            <div class="card">
+                <div class="card-left">
+                    <div class="card-left__inner">
+                        <button class="btn btn-grey card__show-btn js-show-qr"><span>Показать</span> промокод</button>
+                        <div class="card__qr card__qr--text">
+                            <p class="text-sm">Промокод:</p>
+                            <h2 class="title-h2">Каштан</h2>
+                        </div>
+                        <div class="card-price">
+                            <p class="card-price__text text-sm">Стоимость по купону</p>
+                            <p>
+                                <span>-10% на всю сумму чека</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-dots">
+                        <div class="card-dots__dot-big"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot-big"></div>
+                    </div>
+                </div>
+                
+                <div class="card-right">
+                    <div class="card-dots">
+                        <div class="card-dots__dot-big"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot"></div>
+                        <div class="card-dots__dot-big"></div>
+                    </div>
+
+                    <div class="card-right__inner">
+                        <div class="card-tags">
+                            <span class="card-tags__item text-bold text-sm">Поляна 540</span>
+                            <span class="card-tags__item text-bold text-sm">Взрослый</span>
+                        </div>
+                        <h2 class="title-h2 card__title">Каштан</h2>
+                        <p class="card__descr truncate truncate-4">Скидка на ужин</p>
+                        <p class="card__sm-title text-sm">Где воспользоваться?</p>
+                        <p>Назвать официанту при оплате счета</p>
+                        <a href="#" class="card__btn btn btn-main">Показать на карте</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>        
     
+</div>
+
+<div id="modal-form" class="modal-custom js-modal">
+    <div class="modal-custom__body">
+        <div class="modal-custom__header">
+            <h2 class="title-h2 text-center js-title"></h2>
+            <button class="modal-custom__close js-modal-close" type="button"></button>
+        </div>        
+        <div class="modal-custom__content js-text"></div>  
+    </div>
 </div>

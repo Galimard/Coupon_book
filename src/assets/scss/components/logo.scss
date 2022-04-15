@@ -9,4 +9,9 @@
         height: 45px;
         background-size: contain;
     }
+
+    @include breakpoint($bp-360) {
+        width: 130px;
+        height: 40px;
+    }
 }
