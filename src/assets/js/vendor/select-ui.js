@@ -48,7 +48,7 @@ class SelectUI{
                 placeholder: `${i + 1} ребенок`,
                 errorText: 'Выберите возраст ребёнка',
                 nameSelect: `select-children-${i + 1}`,
-                // onSelect: (el) => {this.addToAges()},
+                selectedId: '1',
                 data: [
                     {id:"1",value:"до 1 года", dataProp:"0"},
                     {id:"2",value:"1 год", dataProp:"1"},
@@ -71,8 +71,6 @@ class SelectUI{
                 ]
             });
         }
-
-        
     }
 
     setup(el){
@@ -107,7 +105,7 @@ class SelectUI{
                     ${this.mapItems().join('')}
                 </ul>
             </div>
-            <select class="select-ui__hidden-select" name="${this.nameSelect}" required data-validate-text-invalid="${this.errorText}">
+            <select class="select-ui__hidden-select" name="${this.nameSelect}" required>
                 <option value="">Выберите пункт</option>
                 ${this.mapOptionsSelect().join('')}
             </select>
@@ -160,7 +158,7 @@ class SelectUI{
 
     clickHandler(el, event){            
         const {type} = event.target.dataset;
-        console.log(type);
+        
         if (type === 'input' || type === 'value'){
             this.toggle(el);
         } else if (type === 'item'){

@@ -351,17 +351,17 @@
                 warning;
 
             if( this.settings.alerts ){
-                if (this.settings.commonError) {
-                    alert = this.DOM.scope.querySelector('.js-message');
-                    alert.innerHTML = text;
-                } else {
+                // if (this.settings.commonError) {
+                //     // alert = this.DOM.scope.querySelector('.js-message');
+                //     // alert.innerHTML = text;
+                // } else {
                     if( alert ) {
                         alert.innerHTML = text;
                     } else {
                         warning = '<div class="'+ this.settings.classes.alert +'">' + text + '</div>';
                         item.insertAdjacentHTML('beforeend', warning);
                     }
-                }                               
+                // }                               
             }
 
             item.classList.remove(this.settings.classes.bad);
@@ -394,10 +394,10 @@
             if( warning )
                 warning.parentNode.removeChild(warning);
 
-            if( this.settings.alerts ) {
-                warning = this.DOM.scope.querySelector('.js-message');
-                warning.innerHTML = '';
-            }
+            // if( this.settings.alerts ) {
+            //     warning = this.DOM.scope.querySelector('.js-message');
+            //     warning.innerHTML = '';
+            // }
         },
 
         /**

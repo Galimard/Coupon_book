@@ -39,6 +39,8 @@ class Form {
                 // console.log($(this).serialize());
                 
                 if (validatorResult.valid) {
+                    that.hideErrorMessage(el);
+
                     if (typeof that.handleSubmit == 'function') {
                         const handleSubmitResult = that.handleSubmit();
                         
@@ -48,8 +50,10 @@ class Form {
                             that.showErrorMessage(el, handleSubmitResult.error);
                         }                        
                     }
+                } else {
+                    that.showErrorMessage(el, 'Заполните все поля');
                 }
-                
+            
                 return !!validatorResult.valid;
             };
            
@@ -61,11 +65,16 @@ class Form {
         $error.innerHTML = error;
     }
 
+    hideErrorMessage = (el) => {
+        const $error = el.querySelector('.js-message');
+        $error.innerHTML = '';
+    }
+
     showNextStep = (el) => {
-        const nextStep = el.nextElementSibling;
+        const $nextStep = el.nextElementSibling;
 
         el.classList.add('hide');
 
-        if (nextStep.classList.contains('reg-form')) nextStep.classList.add('active');
+        if ($nextStep && $nextStep.classList.contains('reg-form')) $nextStep.classList.add('active');
     }
 }
