@@ -1,9 +1,15 @@
 .tab-links {
-    margin-left: calc((100% - #{$csm-992}) / 2 + 24px);
-    margin-right: calc((100% - #{$csm-992}) / 2 + 24px);  
+    border-bottom: 1px solid $lightGrey;
     padding: ($space * 6) 0;
     background: $white;
+    position: sticky;
+    top: 83px;
     z-index: 1;
+
+    &-wrap {
+        margin-left: calc((100% - #{$csm-992}) / 2 + 24px);
+        margin-right: calc((100% - #{$csm-992}) / 2 + 24px);
+    }   
 
     &__item {
         border-radius: 21px;
@@ -94,7 +100,7 @@
 }
 
 .tab-content {
-    // margin-top: $space * 10;
+    padding-top: $space * 6;
     margin-left: auto;
     margin-right: auto;
 
@@ -107,31 +113,32 @@
     }
 }
 
-.tab-links.fixed {
-    position: fixed;
-    top: 83px;
-    left: 0;
-    width: 560px;
-    z-index: 1;
-    background: $white;
-    padding: ($space * 6) 0;
-}
-
 @include breakpoint($bp-768) {
     .tab-links {
-        margin-left: calc((100% - #{$csm-768}) / 2 + 24px);
-        margin-right: 0;
+        &-wrap {
+            margin-left: calc((100% - #{$csm-768}) / 2 + 24px);
+            margin-right: 0;
+        }
+        
     }
 }
 
 @include breakpoint($bp-576) {
     .tab-links {
-        margin-left: calc((100% - #{$csm-576}) / 2 + 24px);
+        top: 78px;
+
+        &-wrap {
+            margin-left: calc((100% - #{$csm-576}) / 2 + 24px);
+        }        
     }
 }
 
 @include breakpoint($bp-360) {
     .tab-links {
-        margin-left: calc((100% - #{$csm-360}) / 2);
+        top: 73px;
+
+        &-wrap {
+            margin-left: calc((100% - #{$csm-360}) / 2);
+        }        
     }
 }
