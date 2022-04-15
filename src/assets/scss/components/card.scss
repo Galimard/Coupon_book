@@ -1,0 +1,246 @@
+.card-block {
+    margin-bottom: $space * 6;
+
+    &__title {
+        margin-bottom: $space * 6;
+    }
+}
+
+.card {
+    display: flex;
+    min-height: 285px;
+
+    &:not(:last-child) {
+        margin-bottom: $space * 6;
+    }
+
+    &__qr {
+        width: 180px;
+        height: 180px;
+        border-radius: 16px;        
+    }
+
+    &__qr--qr {
+        background: $midGrey url('/assets/images/qr-sm.svg') center center no-repeat;
+    }
+
+    &__qr--img {
+        background: url('/assets/images/qr.png') center center no-repeat;
+        background-size: contain;
+    } 
+
+    &__qr--text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: $midGrey;
+
+        p {
+            color: $darkGrey;
+            margin-bottom: $space;
+        }
+    }
+    
+    &__title {
+        margin-bottom: $space * 3;
+    }
+
+    &__descr {
+        margin-bottom: $space * 2;
+    }
+
+    &__showmore {
+        color: $darkGrey;
+        flex: auto;       
+    }
+
+    &__sm-title {
+        color: $darkGrey;
+        margin-top: $space * 4;
+        margin-bottom: $space;
+    }
+
+    &__btn {
+        margin-top: $space * 4;
+    }
+
+    &-price {
+        &__text {
+            color: $darkGrey;
+            margin-bottom: $space;
+        }
+
+        &__old {
+            color: $grey;
+            text-decoration: line-through;
+            margin-right: $space * 2;
+        }
+    }
+
+    &__show-btn {
+        display: none;
+    }
+}
+
+.card-left {        
+    width: 228px;
+    background: $lightGrey;
+    border-radius: 16px;
+    position: relative;
+
+    &__inner {
+        padding: $space * 6;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .card-dots {
+        right: -12px;
+    }
+}
+
+.card-right {
+    width: 333px;
+    background: $lightGrey;
+    border-radius: 16px;
+    position: relative;
+
+    &__inner {
+        padding: $space * 6;
+        display: flex;
+        flex-direction: column;
+        min-height: 285px;
+    }
+
+    .card-dots {
+        left: -12px;
+    }
+}
+
+.card.rotate {
+    .card-left {
+        transform: rotate(-5deg);
+        transform-origin: right bottom;
+    }
+
+    .card-left__inner {
+        justify-content: center;
+    }
+
+    .card__subtitle {
+        text-align: center;
+    }
+}
+
+.card-dots {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -($space * 3);
+    margin-bottom: -($space * 3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+
+    &__dot {
+        width: 6px;
+        height: 6px;
+        background: $white;
+        border-radius: 50%;
+    }
+
+    &__dot-big {
+        width: 24px;
+        height: 24px;
+        background: $white;
+        border-radius: 50%;
+    }
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4px 16px;
+
+    &__item {
+        background: $mainText;
+        border-radius: 6px;
+        padding: $space ($space * 2);
+        color: $white;
+        margin: 0 $space;
+    }
+
+    &__item:not(:nth-last-child(-n+3)) {
+        margin-bottom: $space * 2;
+    }
+}
+
+@include breakpoint($bp-768) {
+    .card {
+        flex-direction: column-reverse;
+
+        &-price,
+        &__qr {
+            display: none;
+        }
+
+        &__qr {
+            margin: ($space * 6) auto 0;
+        }
+
+        &__show-btn,
+        &__qr.show {
+            display: block;
+        }
+
+        &__qr--text.show {
+            display: flex;
+        }
+    }
+
+    .card-left,
+    .card-right {
+        width: 100%;
+    }
+
+    .card-dots {
+        flex-direction: row;
+        left: 0;
+        right: 0;
+        
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    .card-left .card-dots {
+        right: 0;
+        top: -12px;
+        bottom: unset;
+    }
+
+    .card-right .card-dots {
+        left: 0;
+        top: unset;
+        bottom: -12px;
+    }
+
+    .card.rotate .card-left {
+        transform: rotate(-2deg);
+    }
+}
+
+@include breakpoint($bp-576) {
+    .card {
+        &__qr {
+            width: 100%;
+            height: 264px;
+        }
+    }
+}

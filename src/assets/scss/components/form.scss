@@ -1,0 +1,214 @@
+.form {
+    max-width: 365px;
+    background: $lightGrey;
+    border-radius: 12px;
+    padding: $space * 6;
+    color: $darkGrey;
+
+    &__title {
+        margin-bottom: $space * 3;
+        text-align: center;
+    }
+
+    &__fieldset {
+        margin-bottom: $space * 6;
+    }
+
+    &__subtitle {
+        margin-bottom: $space * 3;
+    }
+
+    &__row {
+        display: flex;
+        margin: 0 -$space;
+
+        .form-item {
+            margin: 0 $space 0 !important;
+        }
+    }
+
+    &__btn {
+        margin-top: $space * 6;
+        margin-bottom: $space * 4;
+    }
+
+    &__policy {
+        text-align: center;
+
+        &-link {
+            color: $darkGrey;
+        }
+    }
+
+    &__error {
+        color: $red;
+        text-align: center;
+        margin-top: $space * 4;
+        padding: 0 ($space * 10);
+    }
+
+    &__input-wrap {
+        display: block;
+        position: relative;
+    }
+
+    &__input-wrap-label {
+        position: absolute;
+        top: 19px;
+        left: 12px;
+        z-index: 1;
+    }
+
+    @include breakpoint($bp-576) {
+        &__row {
+            flex-direction: column;
+
+            .form-item {
+                margin-bottom: $space * 2 !important;
+            }
+        }
+    }
+}
+
+.form-select {
+    position: relative;
+    padding: 0 !important;
+    overflow: hidden;
+
+    select {
+        border: none;
+        padding: ($space * 4.75) ($space * 3);
+        width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        color: $darkGrey;
+    }
+}
+
+.form-item {
+    display: block;
+    position: relative;
+
+    &__input {
+        outline: none;
+        width: 100%;
+        padding: ($space * 6.25) ($space * 3) ($space * 2.25);
+        background: $white;
+        box-shadow: 0px 8px 16px $shadow;
+        border-radius: 8px;
+        border: none;
+        font-weight: 700;
+        -webkit-transition: -webkit-box-shadow .3s ease;
+        transition: -webkit-box-shadow .3s ease;
+        -o-transition: box-shadow .3s ease;
+        transition: box-shadow .3s ease;
+        transition: box-shadow .3s ease, -webkit-box-shadow .3s ease;
+    }
+
+    &__input--date {
+        font-family: "Inter", "Arial", sans-serif;
+        padding: ($space * 4.75) ($space * 3);
+        color: $darkGrey;
+        font-weight: 400;
+    }
+
+    &__input--date::-webkit-calendar-picker-indicator {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        top: 0;
+        left: 0;    
+    }
+
+    &__input--date::-webkit-datetime-edit {
+        margin-left: 80px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: $space * 2;
+    }
+
+    &__name {
+        position: absolute;
+        top: 17px;
+        left: 12px;
+        font-size: 14px;
+        line-height: 1.2;
+        transition: all 0.3s ease;   
+    }
+
+    &__input:focus + &__name,
+    &__textarea:focus + &__name,
+    .js-changed.changed + &__name {
+        font-size: 12px;
+        transform: translate(0, -10px);
+        transition: all 0.3s ease;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+
+    &__button {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border: none;
+    }
+
+    &__button--minus {
+        background: url('../images/minus.svg') center center no-repeat;
+    }
+
+    &__button--minus.disabled {
+        background: url('../images/minus-dis.svg') center center no-repeat;
+        pointer-events: none;
+    }
+
+    &__button--plus {
+        background: url('../images/plus.svg') center center no-repeat;
+    }
+
+    &__button--plus.disabled {
+        background: url('../images/plus-dis.svg') center center no-repeat;
+        pointer-events: none;
+    }
+
+    &__count {
+        width: 25px;
+        color: $mainText;
+        font-weight: 700;
+        margin: 0 $space;
+        text-align: center;
+    }
+}
+
+.form-item--guest {
+    input {
+        height: 54px;
+        font-size: 0;
+    }
+
+    .form-item__label--guest {
+        position: absolute;
+        top: 9px;
+        left: 12px;
+        font-weight: 700;
+        color: $mainText;
+    }
+
+    .form-item__name--guest {
+        position: absolute;
+        top: 29px;
+        left: 12px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

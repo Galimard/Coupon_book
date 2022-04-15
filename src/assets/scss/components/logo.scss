@@ -1,0 +1,17 @@
+.logo {
+    display: block;
+    width: 166px;
+    height: 50px;
+    background: url('/assets/images/Logo.svg') center center no-repeat;
+
+    @include breakpoint($bp-576) {
+        width: 145px;
+        height: 45px;
+        background-size: contain;
+    }
+
+    @include breakpoint($bp-360) {
+        width: 130px;
+        height: 40px;
+    }
+}
