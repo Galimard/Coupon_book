@@ -1421,7 +1421,7 @@ a:hover {
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease;
-    z-index: 100; }
+    z-index: 1000; }
   .modal-custom__body {
     max-width: 400px;
     width: 100%;
