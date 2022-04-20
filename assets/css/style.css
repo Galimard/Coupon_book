@@ -1329,7 +1329,7 @@ textarea {
 
 /* Slider */
 .slick-loading .slick-list {
-    background: #fff url("/assets/images/ajax-loader.gif") center center no-repeat;
+    background: #fff url("../images/ajax-loader.gif") center center no-repeat;
 }
 
 /* Icons */
@@ -1751,7 +1751,7 @@ a:hover {
     top: 20px;
     right: 24px;
     border: none;
-    background: #F5F5F5 url("/assets/images/close.svg") center center no-repeat;
+    background: #F5F5F5 url("../images/close.svg") center center no-repeat;
     padding: 0;
 }
 
@@ -1785,7 +1785,7 @@ a:hover {
     display: block;
     width: 166px;
     height: 50px;
-    background: url("/assets/images/Logo.svg") center center no-repeat;
+    background: url("../images/Logo.svg") center center no-repeat;
 }
 
 @media all and (max-width: 575px) {
@@ -2181,11 +2181,11 @@ a:hover {
 }
 
 .card__qr--qr {
-    background: #ECECEC url("/assets/images/qr-sm.svg") center center no-repeat;
+    background: #ECECEC url("../images/qr-sm.svg") center center no-repeat;
 }
 
 .card__qr--img {
-    background: url("/assets/images/qr.png") center center no-repeat;
+    background: url("../images/qr.png") center center no-repeat;
     background-size: contain;
 }
 
@@ -2598,7 +2598,7 @@ a:hover {
     display: block;
     width: 16px;
     height: 16px;
-    background: url("/assets/images/arrow-down.svg") center center no-repeat;
+    background: url("../images/arrow-down.svg") center center no-repeat;
     position: absolute;
     right: 20px;
     top: 50%;
@@ -2673,7 +2673,7 @@ a:hover {
     display: block;
     width: 11px;
     height: 32px;
-    background: url("/assets/images/line.svg") center center no-repeat;
+    background: url("../images/line.svg") center center no-repeat;
     position: absolute;
     top: 0;
     left: -23px;
@@ -2984,7 +2984,7 @@ a:hover {
     display: block;
     width: 460px;
     height: 410px;
-    background: url("/assets/images/trees.svg") center center no-repeat;
+    background: url("../images/trees.svg") center center no-repeat;
     background-size: contain;
     position: absolute;
     bottom: 0;
@@ -2996,7 +2996,7 @@ a:hover {
     display: block;
     width: 305px;
     height: 390px;
-    background: url("/assets/images/animals.svg") center center no-repeat;
+    background: url("../images/animals.svg") center center no-repeat;
     background-size: contain;
     position: absolute;
     top: 50%;
