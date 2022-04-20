@@ -1,4 +1,4 @@
-# Visit Sochi UI #
+# Coupon book #
 
 <p>
 Запуск проекта для разработки: <b>gulp </b><br />

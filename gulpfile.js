@@ -23,6 +23,7 @@ import replace from 'gulp-replace';
 import { create as bsCreate } from 'browser-sync';
 import header from 'gulp-header';
 import footer from 'gulp-footer';
+import ghPages  from 'gulp-gh-pages';
 const browserSync = bsCreate();
 
 /* Paths */
@@ -331,6 +332,15 @@ export const fonts = (cb) => {
 
     cb();
 }
+
+const deploy = () => {
+    return gulp.src('./dist/**/*')
+      .pipe(ghPages());
+}
+// gulp.task('deploy', function() {
+//     return gulp.src('./build/**/*')
+//       .pipe(ghPages());
+// });
 
 export const clean = (cb) => {
     return del(path.clean);

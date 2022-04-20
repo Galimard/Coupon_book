@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+       
+    <link rel="stylesheet" href="/assets/css/style.min.css" />
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="robots" content="index, follow" />
+    <meta name="google" content="notranslate" />
+    <meta name="description" content="" />
+    
+    <title>UI-KIT</title>  </head>
+  <body>
+    <div class="page">
+
+        <div class="header">
+            <div class="container-sm">
+                <div class="header__inner">
+                    <a href="/" class="logo header__logo"></a>
+                    <a href="#" class="btn btn-main header__btn" download>Скачать в PDF</a>
+                </div>        
+            </div>
+        </div>
+
+        <main class="main">
+          <div class="ui-kit">
+              <div class="container-sm">
+          
+                  <h1 class="title-h1 text-center ui-kit__mb">UI Kit Page</h1>
+              
+                  <div class="ui-kit__block">
+                      <a href="/" class="logo"></a>
+                  </div>        
+          
+                  <div class="ui-kit__block">
+                      <h2 class="title-h1 text-center ui-kit__mb">Типографика</h2>
+                      <h2 class="title-h1 ui-kit__mb">Заголовок H1</h2>
+                      <h2 class="title-h2 ui-kit__mb">Заголовок H2</h2>
+                      <h3 class="title-h3 ui-kit__mb"><span>Заголовок H3</span><span class="title-count">17</span></h3>
+                      <p class="ui-kit__mb">Основной текст</p>
+                      <p class="text-sm">Маленький текст</p>
+                  </div>
+              
+                  <div class="ui-kit__block">
+                      <h2 class="title-h1 text-center ui-kit__mb">Кнопки</h2>
+                      <button class="btn btn-main ui-kit__mb">Получить QR-код</button>
+                      <button class="btn btn-grey ui-kit__mb">Показать QR-код</button>
+                      <form action="#" class="form">
+                          <button class="btn btn-main btn-big">Войти</button>
+                      </form>            
+                  </div>
+          
+                  <div class="ui-kit__block">
+                      <h2 class="title-h1 text-center ui-kit__mb">Форма</h2>
+          
+                      <form action="#" class="auth-form form js-form ui-kit__mb" novalidate>
+                          <p class="form__title">Привет! Для использования платформы, авторизуйтесь под личным аккаунтом</p>
+                          
+                          <label class="form-item">
+                              <input class="form-item__input js-changed" type='text' name="name" required autocomplete="off"/>
+                              <span class="form-item__name">Логин</span>
+                          </label>
+                          
+                          <label class="form-item">
+                              <input class="form-item__input js-changed" type='password' name="name" required/>
+                              <span class="form-item__name">Пароль</span>
+                          </label>
+          
+                          <div class="form__error text-sm js-message"></div>
+                          <button class="btn btn-main btn-big form__btn" type="submit">Войти</button>
+                          <p class="form__policy text-sm">Нажимая кнопку «Войти» вы соглашетесь с <a href="#" target="_black" class="form__policy-link">правилами обработки персональных данных</a></p>
+                      </form>
+          
+                      <form action="#" class="reg-form form js-form" novalidate>
+                          <fieldset class="form__fieldset">
+                              <div class="select-ui"></div>
+                          </fieldset>              
+          
+                          <fieldset class="form__fieldset">
+                              <legend class="form__subtitle">Даты прибывания гостей</legend>
+          
+                              <div class="form__row">
+                                  <label class="form-item">
+                                      <input id="date-begin" class="form-item__input js-changed" type='text' name="date" required autocomplete="off"/>
+                                      <span class="form-item__name">Прибытие</span>
+                                  </label>
+                                  <label class="form-item">
+                                      <input id="date-end" class="form-item__input js-changed" type='text' name="date" required autocomplete="off"/>
+                                      <span class="form-item__name">Выезд</span>
+                                  </label>
+                              </div>
+                          </fieldset>
+          
+                          <fieldset class="form__fieldset">
+                              <legend class="form__subtitle">Какое будет количество гостей?</legend>
+          
+                              <label class="form-item form-item--guest js-input-guest">
+                                  <input id="adult" class="form-item__input js-changed" type='text' name="adult" data-type="input" required />
+                                  <span class="form-item__label--guest">Взрослые</span>
+                                  <span class="form-item__name--guest">Старше 18 лет</span>
+                                  <div class="form-item__buttons">
+                                      <button class="form-item__button form-item__button--minus js-minus disabled" type="button"></button>
+                                      <span class="form-item__count js-count-guest">0</span>
+                                      <button class="form-item__button form-item__button--plus js-plus" type="button"></button>
+                                  </div>
+                              </label>
+                              
+                              <label class="form-item form-item--guest js-input-guest">                         
+                                  <input id="children" class="form-item__input js-changed" type='text' name="children" data-type="input" required />
+                                  <span class="form-item__label--guest">Дети</span>
+                                  <span class="form-item__name--guest">От 0 до 18 лет</span>
+                                  <div class="form-item__buttons">
+                                      <button class="form-item__button form-item__button--minus js-minus disabled" type="button"></button>
+                                      <span class="form-item__count js-count-guest">0</span>
+                                      <button class="form-item__button form-item__button--plus js-plus" type="button"></button>
+                                  </div>
+                              </label>
+                              <div class="js-select-children"></div>
+                              
+                          </fieldset>
+                          
+                          <fieldset class="form__fieldset">
+                              <legend class="form__subtitle">Контактные данные</legend>
+          
+                              <label class="form-item">
+                                  <input class="form-item__input js-changed" type='text' name="name" required/>
+                                  <span class="form-item__name">Имя гостя</span>
+                              </label>
+                              
+                              <label class="form-item">
+                                  <input class="form-item__input js-changed js-input-phone" type='tel' name="phone" required/>
+                                  <span class="form-item__name">Телефон гостя</span>
+                              </label>
+                          </fieldset>
+                          
+                          <div class="form__error text-sm js-message"></div>
+                          <button class="btn btn-main btn-big form__btn" type="submit">Сгенерировать</button>
+                          <p class="form__policy text-sm">Нажимая на кнопку «Сгенерировать купонную книгу» вы подтверждаете отправку СМС на телефон гостя с ссылкой на сгенерированную купонную книгу</p>
+                      </form>
+                  </div>
+          
+              </div>
+          
+              <div class="container-sm">
+                  <div class="ui-kit__block">
+                      <h2 class="title-h1 text-center ui-kit__mb">Табы</h2>
+          
+                      <div class="js-tabs">
+                          <div class="tab-links js-tabs-slider">
+                              <a href="#tab1" class="tab-links__item active js-tab-link">Прогулочные билеты</a>
+                              <a href="#tab2" class="tab-links__item js-tab-link">SPA и бани</a>
+                              <a href="#tab3" class="tab-links__item js-tab-link">Рестораны</a>
+                              <a href="#tab4" class="tab-links__item js-tab-link">Развлечения</a>
+                              <a href="#tab5" class="tab-links__item js-tab-link">Для детей</a>
+                          </div>
+                      
+                          <div class="tab-content">
+                              <div id="tab1" class="tab-content__item active js-tab-content">tab1</div>
+                              <div id="tab2" class="tab-content__item js-tab-content">tab2</div>
+                              <div id="tab3" class="tab-content__item js-tab-content">tab3</div>
+                              <div id="tab4" class="tab-content__item js-tab-content">tab4</div>
+                              <div id="tab5" class="tab-content__item js-tab-content">tab5</div>
+                          </div>
+                      </div>
+                  </div>
+          
+                  <div class="ui-kit__block">
+                      <h2 class="title-h1 text-center ui-kit__mb">Карточки</h2>
+          
+                      <div class="card ui-kit__mb js-card">
+                          <div class="card-left">
+                              <div class="card-left__inner">
+                                  <button class="btn btn-grey card__show-btn js-show-qr"><span>Показать</span> QR-код</button>
+                                  <div class="card__qr card__qr--qr"></div>                                        
+                                  <div class="card-price">
+                                      <p class="card-price__text text-sm">Стоимость по купону</p>
+                                      <p>
+                                          <span class="card-price__old">350 ₽</span>
+                                          <span>Бесплатно</span>
+                                      </p>
+                                  </div>
+                              </div>
+                              
+                              <div class="card-dots js-dots"></div>
+                          </div>
+                          
+                          <div class="card-right">
+                              <div class="card-dots js-dots"></div>
+          
+                              <div class="card-right__inner">
+                                  <div class="card-tags">
+                                      <span class="card-tags__item text-bold text-sm">Поляна 540 –2200</span>
+                                      <span class="card-tags__item text-bold text-sm">Детский</span>
+                                  </div>
+                                  <h2 class="title-h2 card__title">Прогулочный билет панорама 2200</h2>
+                                  <p class="card__descr truncate truncate-4">Тариф действует на один подъем и один спуск по канатным дорогам «Красная Поляна», «Реликтовый лес» и «Вершина» с 9:00 до 18:00...</p>
+                                  <a href="javascript:void(0)" class="card__showmore" data-modal-ajax="modal-form">Показать полностью...</a>
+                                  <p class="card__sm-title text-sm">Где воспользоваться?</p>
+                                  <p>Терминал в здании ИЦ на 540</p>
+                                  <a href="#" class="card__btn btn btn-main">Получить QR-код</a>
+                              </div>
+                          </div>
+                      </div>
+          
+                      <div class="card js-card rotate ui-kit__mb">
+                          <div class="card-left">
+                              <div class="card-left__inner">
+                                  <p class="title-h3 card__title">Купон уже использован</p>
+                              </div>
+                              <div class="card-dots js-dots"></div>
+                          </div>
+                          
+                          <div class="card-right">
+                              <div class="card-dots js-dots"></div>
+          
+                              <div class="card-right__inner">
+                                  <div class="card-tags">
+                                      <span class="card-tags__item text-bold text-sm">Поляна 540 –2200</span>
+                                      <span class="card-tags__item text-bold text-sm">Взрослый</span>
+                                  </div>
+                                  <h2 class="title-h2 card__title">Банный комплекс 4 стихии</h2>
+                                  <p class="card__descr truncate truncate-4">Процедура парения в большом банном комплексе</p>
+                                  <p class="card__sm-title text-sm">Где воспользоваться?</p>
+                                  <p>Вставьте промокод в специальную форму при оплаче через сайт</p>
+                                  <a href="#" class="card__btn btn btn-main">Перейти на сайт</a>
+                              </div>
+                          </div>
+                      </div>
+          
+                      <div class="card js-card">
+                          <div class="card-left">
+                              <div class="card-left__inner">
+                                  <button class="btn btn-grey card__show-btn js-show-qr"><span>Показать</span> промокод</button>
+                                  <div class="card__qr card__qr--text">
+                                      <p class="text-sm">Промокод:</p>
+                                      <h2 class="title-h2">Каштан</h2>
+                                  </div>
+                                  <div class="card-price">
+                                      <p class="card-price__text text-sm">Стоимость по купону</p>
+                                      <p>
+                                          <span>-10% на всю сумму чека</span>
+                                      </p>
+                                  </div>
+                              </div>
+                              
+                              <div class="card-dots js-dots"></div>
+                          </div>
+                          
+                          <div class="card-right">
+                              <div class="card-dots js-dots"></div>
+          
+                              <div class="card-right__inner">
+                                  <div class="card-tags">
+                                      <span class="card-tags__item text-bold text-sm">Поляна 540</span>
+                                      <span class="card-tags__item text-bold text-sm">Взрослый</span>
+                                  </div>
+                                  <h2 class="title-h2 card__title">Каштан</h2>
+                                  <p class="card__descr truncate truncate-4">Скидка на ужин</p>
+                                  <p class="card__sm-title text-sm">Где воспользоваться?</p>
+                                  <p>Назвать официанту при оплате счета</p>
+                                  <a href="#" class="card__btn btn btn-main">Показать на карте</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>        
+              
+          </div>
+          
+          <div id="modal-form" class="modal-custom js-modal">
+              <div class="modal-custom__body">
+                  <div class="modal-custom__header">
+                      <h2 class="title-h2 text-center js-title"></h2>
+                      <button class="modal-custom__close js-modal-close" type="button"></button>
+                  </div>        
+                  <div class="modal-custom__content js-text"></div>  
+              </div>
+          </div>
+        </main>
+
+        <div class="footer">
+            
+        </div>    </div>
+
+    <script src="/assets/js/vendor/jquery-3.3.1.min.js"></script>  
+    <script src="/assets/js/vendor/slick.min.js"></script>  
+    <script src="/assets/js/vendor/validator.js"></script>  
+    <script src="/assets/js/vendor/form-class.js"></script>  
+    <script src="/assets/js/vendor/input-class.js"></script>  
+    <script src="/assets/js/vendor/input-guest-class.js"></script>  
+    <script src="/assets/js/vendor/tabs-class.js"></script>  
+    <script src="/assets/js/vendor/select-ui.js"></script>   
+    <script src="/assets/js/vendor/datepicker.js"></script>  
+    <script src="/assets/js/vendor/inputmask.js"></script>  
+    <script src="/assets/js/vendor/show-qr-class.js"></script>  
+    <script src="/assets/js/vendor/modal-class.js"></script>   
+    <script src="/assets/js/vendor/card-class.js"></script>   
+    <script src="/assets/js/dist/tabs.js"></script>  
+    <script src="/assets/js/dist/slider.js"></script>  
+    <script src="/assets/js/dist/form.js"></script>  
+    <script src="/assets/js/dist/select.js"></script>  
+    <script src="/assets/js/dist/input.js"></script>  
+    <script src="/assets/js/dist/input-guest.js"></script>  
+    <script src="/assets/js/dist/datepicker.js"></script>  
+    <script src="/assets/js/dist/inputmask.js"></script> 
+    <script src="/assets/js/dist/show-qr.js"></script> 
+    <script src="/assets/js/dist/modal.js"></script> 
+    <script src="/assets/js/dist/card.js"></script> 
+    <script src="/assets/js/app.js"></script>   </body>
+</html>

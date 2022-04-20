@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+       
+    <link rel="stylesheet" href="/assets/css/style.min.css" />
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="robots" content="index, follow" />
+    <meta name="google" content="notranslate" />
+    <meta name="description" content="" />
+    
+    <title>Панель менеджера</title>  </head>
+  <body>
+    <div class="page">
+
+        <div class="header">
+            <div class="container-sm">
+                <div class="header__inner">
+                    <a href="/" class="logo header__logo"></a>
+                    <a href="#" class="btn btn-main header__btn" download>Скачать в PDF</a>
+                </div>        
+            </div>
+        </div>
+
+        <main class="main">
+          
+          <div class="panel-page">
+              <div class="container">
+          
+                  <div class="panel">
+                      <a href="/" class="logo panel__logo"></a>
+                      <p class="panel__text">Платформа генерации купонной книги</p>
+              
+                      <form action="#" class="auth-form form js-form" novalidate>
+                          <p class="form__title">Привет! Для использования платформы, авторизуйтесь под личным аккаунтом</p>
+                          
+                          <label class="form-item">
+                              <input class="form-item__input js-changed" type='text' name="name" required autocomplete="off"/>
+                              <span class="form-item__name">Логин</span>
+                          </label>
+                          
+                          <label class="form-item">
+                              <input class="form-item__input js-changed" type='password' name="name" required/>
+                              <span class="form-item__name">Пароль</span>
+                          </label>
+              
+                          <div class="form__error text-sm js-message"></div>
+                          <button class="btn btn-main btn-big form__btn" type="submit">Войти</button>
+                          <p class="form__policy text-sm">Нажимая кнопку «Войти» вы соглашетесь с <a href="#" target="_black" class="form__policy-link">правилами обработки персональных данных</a></p>
+                      </form>
+          
+                      <form action="#" class="reg-form form js-form" novalidate>
+                          <fieldset class="form__fieldset">
+                              <div class="select-ui desktop"></div>
+          
+                              <!-- Обычный селект для мобильной версии. Если не нужен, удалить весь блок form-select, а у блока select-ui, который расположен выше, удалить класс desktop -->
+                              <div class="form-select select-ui__input">
+                                  <select name="type_book" class="mobile">
+                                      <option value="1">Яркие весенние каникулы</option>
+                                      <option value="2">Тип книги 2</option>
+                                      <option value="3">Тип книги 3</option>
+                                  </select>
+                              </div>                    
+                          </fieldset>              
+          
+                          <fieldset class="form__fieldset">
+                              <legend class="form__subtitle">Даты прибывания гостей</legend>
+          
+                              <div class="form__row">
+                                  <label class="form-item">
+                                      <input id="date-begin" class="form-item__input js-changed desktop" type='text' name="date" required autocomplete="off"/>
+                                      <span class="form-item__name desktop">Прибытие</span>
+          
+                                      <!-- Обычный инпут date для мобильной версии. Если не нужен, удалить блок form__input-wrap, а у блока form-item__name, который расположен выше, удалить класс desktop -->
+                                      <label class="form__input-wrap">                                
+                                          <input type="date" name="date" class="form-item__input form-item__input--date mobile">
+                                          <span class="form__input-wrap-label">Прибытие</span> 
+                                      </label>
+                                  </label>
+                                  <label class="form-item">
+                                      <input id="date-end" class="form-item__input js-changed desktop" type='text' name="date" required autocomplete="off"/>
+                                      <span class="form-item__name desktop">Выезд</span>
+          
+                                      <!-- Обычный инпут date для мобильной версии. Если не нужен, удалить блок form__input-wrap, а у блока form-item__name, который расположен выше, удалить класс desktop -->
+                                      <label class="form__input-wrap">
+                                          <input type="date" name="date" class="form-item__input form-item__input--date mobile">
+                                          <span class="form__input-wrap-label">Выезд</span>
+                                      </label>
+                                  </label>
+                              </div>
+                          </fieldset>
+          
+                          <fieldset class="form__fieldset">
+                              <legend class="form__subtitle">Какое будет количество гостей?</legend>
+          
+                              <label class="form-item form-item--guest js-input-guest">
+                                  <input id="adult" class="form-item__input js-changed" type='text' name="adult" data-type="input" required />
+                                  <span class="form-item__label--guest">Взрослые</span>
+                                  <span class="form-item__name--guest">Старше 18 лет</span>
+                                  <div class="form-item__buttons">
+                                      <button class="form-item__button form-item__button--minus js-minus disabled" type="button"></button>
+                                      <span class="form-item__count js-count-guest">0</span>
+                                      <button class="form-item__button form-item__button--plus js-plus" type="button"></button>
+                                  </div>
+                              </label>
+                              
+                              <label class="form-item form-item--guest js-input-guest">                         
+                                  <input id="children" class="form-item__input js-changed" type='text' name="adult" data-type="input" required />
+                                  <span class="form-item__label--guest">Дети</span>
+                                  <span class="form-item__name--guest">От 0 до 18 лет</span>
+                                  <div class="form-item__buttons">
+                                      <button class="form-item__button form-item__button--minus js-minus disabled" type="button"></button>
+                                      <span class="form-item__count js-count-guest">0</span>
+                                      <button class="form-item__button form-item__button--plus js-plus" type="button"></button>
+                                  </div>
+                              </label>
+                              <div class="js-select-children"></div>                    
+                          </fieldset>
+                          
+                          <fieldset class="form__fieldset">
+                              <legend class="form__subtitle">Контактные данные</legend>
+          
+                              <label class="form-item">
+                                  <input class="form-item__input js-changed" type='text' name="name" required/>
+                                  <span class="form-item__name">Имя гостя</span>
+                              </label>
+                              
+                              <label class="form-item">
+                                  <input class="form-item__input js-changed js-input-phone" type='tel' name="phone" required/>
+                                  <span class="form-item__name">Телефон гостя</span>
+                              </label>
+                          </fieldset>
+                          
+                          <div class="form__error text-sm js-message"></div>
+                          <button class="btn btn-main btn-big form__btn" type="submit">Сгенерировать</button>
+                          <p class="form__policy text-sm">Нажимая на кнопку «Сгенерировать купонную книгу» вы подтверждаете отправку СМС на телефон гостя с ссылкой на сгенерированную купонную книгу</p>
+                      </form>
+              
+                      <p class="copyright panel__copyright">©2022 – НАО «Красная поляна»</p>
+                  </div>
+                  
+              </div>
+          </div>
+        </main>
+
+        <div class="footer">
+            
+        </div>    </div>
+
+    <script src="/assets/js/vendor/jquery-3.3.1.min.js"></script>  
+    <script src="/assets/js/vendor/slick.min.js"></script>  
+    <script src="/assets/js/vendor/validator.js"></script>  
+    <script src="/assets/js/vendor/form-class.js"></script>  
+    <script src="/assets/js/vendor/input-class.js"></script>  
+    <script src="/assets/js/vendor/input-guest-class.js"></script>  
+    <script src="/assets/js/vendor/tabs-class.js"></script>  
+    <script src="/assets/js/vendor/select-ui.js"></script>   
+    <script src="/assets/js/vendor/datepicker.js"></script>  
+    <script src="/assets/js/vendor/inputmask.js"></script>  
+    <script src="/assets/js/vendor/show-qr-class.js"></script>  
+    <script src="/assets/js/vendor/modal-class.js"></script>   
+    <script src="/assets/js/vendor/card-class.js"></script>   
+    <script src="/assets/js/dist/tabs.js"></script>  
+    <script src="/assets/js/dist/slider.js"></script>  
+    <script src="/assets/js/dist/form.js"></script>  
+    <script src="/assets/js/dist/select.js"></script>  
+    <script src="/assets/js/dist/input.js"></script>  
+    <script src="/assets/js/dist/input-guest.js"></script>  
+    <script src="/assets/js/dist/datepicker.js"></script>  
+    <script src="/assets/js/dist/inputmask.js"></script> 
+    <script src="/assets/js/dist/show-qr.js"></script> 
+    <script src="/assets/js/dist/modal.js"></script> 
+    <script src="/assets/js/dist/card.js"></script> 
+    <script src="/assets/js/app.js"></script>   </body>
+</html>
