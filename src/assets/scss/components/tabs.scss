@@ -128,17 +128,14 @@
         top: 78px;
 
         &-wrap {
-            margin-left: calc((100% - #{$csm-576}) / 2 + 24px);
+            margin-left: 0;
+            // margin-left: calc((100% - #{$csm-576}) / 2 + 24px);
         }        
     }
 }
 
 @include breakpoint($bp-360) {
     .tab-links {
-        top: 73px;
-
-        &-wrap {
-            margin-left: calc((100% - #{$csm-360}) / 2);
-        }        
+        top: 73px;      
     }
 }
