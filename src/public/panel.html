@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: no-header
 title: Панель менеджера
 ---
 
@@ -35,6 +35,7 @@ title: Панель менеджера
                     <!-- Обычный селект для мобильной версии. Если не нужен, удалить весь блок form-select, а у блока select-ui, который расположен выше, удалить класс desktop -->
                     <div class="form-select select-ui__input">
                         <select name="type_book" class="mobile">
+                            <option disabled selected hidden value="">Тип книги</option>
                             <option value="1">Яркие весенние каникулы</option>
                             <option value="2">Тип книги 2</option>
                             <option value="3">Тип книги 3</option>
@@ -53,7 +54,7 @@ title: Панель менеджера
                             <!-- Обычный инпут date для мобильной версии. Если не нужен, удалить блок form__input-wrap, а у блока form-item__name, который расположен выше, удалить класс desktop -->
                             <label class="form__input-wrap">                                
                                 <input type="date" name="date" class="form-item__input form-item__input--date mobile">
-                                <span class="form__input-wrap-label">Прибытие</span> 
+                                <span class="form__input-wrap-label mobile">Прибытие</span> 
                             </label>
                         </label>
                         <label class="form-item">
@@ -63,7 +64,7 @@ title: Панель менеджера
                             <!-- Обычный инпут date для мобильной версии. Если не нужен, удалить блок form__input-wrap, а у блока form-item__name, который расположен выше, удалить класс desktop -->
                             <label class="form__input-wrap">
                                 <input type="date" name="date" class="form-item__input form-item__input--date mobile">
-                                <span class="form__input-wrap-label">Выезд</span>
+                                <span class="form__input-wrap-label mobile">Выезд</span>
                             </label>
                         </label>
                     </div>

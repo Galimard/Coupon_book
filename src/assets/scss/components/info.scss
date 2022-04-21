@@ -22,7 +22,7 @@
     }
 
     @include breakpoint($bp-768) {
-        margin: 0 -($space * 2);
+        margin: 0 (-$space * 2);
 
         &__item {
             width: calc(50% - 23px);
